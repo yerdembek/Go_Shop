@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/web/static/css/bootstrap.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+
+<body class="bg-light">
+
+<header class="bg-white shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+        <a href="#" class="navbar-brand fw-bold text-primary">MyMarket</a>
+
+        <form class="d-flex w-50">
+            <input class="form-control me-2" type="search" placeholder="Поиск товаров..." aria-label="Search">
+            <button class="btn btn-outline-primary">Найти</button>
+        </form>
+
+        <div>
+            <a href="http://localhost:8080/login" class="btn btn-outline-secondary me-2">Войти</a>
+            <a href="#" class="btn btn-primary">Разместить объявление</a>
+        </div>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Все категории</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Авто</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Недвижимость</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Электроника</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+
+        <aside class="col-md-3 col-lg-2 mb-4">
+            <div class="card">
+                <div class="card-header">Фильтры</div>
+                <div class="card-body">
+                    <h6>Регион</h6>
+                    <select class="form-select mb-3">
+                        <option>Алматы</option>
+                        <option>Астана</option>
+                        <option>Шымкент</option>
+                    </select>
+
+                    <h6>Цена</h6>
+                    <input type="number" class="form-control mb-2" placeholder="От">
+                    <input type="number" class="form-control mb-3" placeholder="До">
+
+                    <h6>Состояние</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="new">
+                        <label class="form-check-label" for="new">Новый</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="used">
+                        <label class="form-check-label" for="used">Б/У</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="col-md-9 col-lg-10">
+            <h3 class="mb-4">Последние объявления</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Смартфон iPhone 13</h5>
+                            <p class="card-text text-muted">Цена: 300 000 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Ноутбук Lenovo</h5>
+                            <p class="card-text text-muted">Цена: 200 000 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Товар">
+                        <div class="card-body">
+                            <h5 class="card-title">Автомобиль Toyota</h5>
+                            <p class="card-text text-muted">Цена: 5 000 000 ₸</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<footer class="bg-dark text-white mt-4">
+    <div class="container text-center py-3">
+        <p class="mb-0">© 2025 MyMarket. Все права защищены.</p>
+    </div>
+</footer>
+
+
+<script src="/web/static/js/bootstrap.bundle.js"></script>
+</body>
+</html>
