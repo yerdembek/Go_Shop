@@ -5,16 +5,21 @@
 
 User - ID, контакты, имя, аккаунт, платежная карта, роль(Seller - *. Buyer - *.).
 
-CartItems - (BuyerID, PostID, Quantity)
-Favorites - (BuyerID, PostID)
+CartItems - BuyerID, PostID, Quantity
+Favorites - BuyerID, PostID
 
-Post - ID, SellerID, название товара, характеристики, фотографий, описание, цена, дата создания статус.
+Post - ID, SellerID, название товара, фотографий, описание, цена, дата создания, статус.
 
-Review - ID, PostID, содержимое текст, рейтинг звезд, фотография, видео.
+Review - ID, PostID, содержимое текст, рейтинг звезд, фотография.
 
-Order - ID, BuyerID, Status, дата создания, Address, конечная цена.
+Order - ID, BuyerID, Status('in stock', 'in transit', 'trans courier', 'issued'), дата создания, Address.
 
 
 pages:
 Home - 
 Catalog -
+
+
+
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Разместить объявление</title>
+    <link href="/web/static/css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Навбар -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/home">MyMarket</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/home">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Войти</a></li>
+                <li class="nav-item"><a class="nav-link" href="/register">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Контент -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 text-center">Разместить объявление</h3>
+
+                    <form action="/post-ad" method="POST" enctype="multipart/form-data">
+                        <!-- Название -->
+                        <div class="mb-3">
+                            <label class="form-label">Название товара</label>
+                            <input type="text" class="form-control" name="title" placeholder="Введите название" required>
+                        </div>
+
+                        <!-- Категория -->
+                        <div class="mb-3">
+                            <label class="form-label">Категория</label>
+                            <select class="form-select" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="electronics">Электроника</option>
+                                <option value="clothes">Одежда</option>
+                                <option value="home">Дом и сад</option>
+                                <option value="cars">Авто</option>
+                            </select>
+                        </div>
+
+                        <!-- Цена -->
+                        <div class="mb-3">
+                            <label class="form-label">Цена (₸)</label>
+                            <input type="number" class="form-control" name="price" placeholder="Укажите цену" required>
+                        </div>
+
+                        <!-- Описание -->
+                        <div class="mb-3">
+                            <label class="form-label">Описание</label>
+                            <textarea class="form-control" name="description" rows="4" placeholder="Добавьте описание..." required></textarea>
+                        </div>
+
+                        <!-- Фото -->
+                        <div class="mb-3">
+                            <label class="form-label">Фотографии товара</label>
+                            <input type="file" class="form-control" name="images" multiple>
+                        </div>
+
+                        <!-- Кнопка -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Разместить объявление</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/web/static/js/bootstrap.bundle.js"></script>
+</body>
+</html>

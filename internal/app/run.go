@@ -1,18 +1,10 @@
 package app
 
 import (
-	"fmt"
-	"net/http"
+	"First_Structured_GO_Project/web/handlers"
 )
 
 func Run() {
-	fs := http.FileServer(http.Dir("./web/static"))
-	http.Handle("/web/static/", http.StripPrefix("/web/static/", fs))
+	handlers.Handle()
 
-	http.HandleFunc("/", HomePage)
-	http.HandleFunc("/login", LoginPage)
-	http.HandleFunc("/register", RegisterPage)
-
-	fmt.Println("Сервер запущен на http://localhost:8080")
-	http.ListenAndServe("localhost:8080", nil)
 }
