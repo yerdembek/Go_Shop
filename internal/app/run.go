@@ -1,10 +1,15 @@
 package app
 
 import (
+	"First_Structured_GO_Project/internal/database"
 	"First_Structured_GO_Project/web/handlers"
+	"fmt"
 )
 
 func Run() {
-	handlers.Handle()
+	fmt.Println("In Run function")
 
+	database.Connect()
+
+	handlers.Handle()
 }
